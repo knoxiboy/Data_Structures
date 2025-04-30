@@ -1,9 +1,6 @@
 package Data_Structures;
 
-
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class DS25_Graph_AllPaths {
     static class Edge {
@@ -42,7 +39,8 @@ public class DS25_Graph_AllPaths {
         graph[5].add(new Edge(5, 3, 1));
         graph[5].add(new Edge(5, 4, 1));
         graph[5].add(new Edge(5, 6, 1));
-        graph[5].add(new Edge(6, 5, 1));
+
+        graph[6].add(new Edge(6, 5, 1));
     }
 
 
@@ -79,7 +77,7 @@ public class DS25_Graph_AllPaths {
         */
 
         int src = 0;
-        int tar = 5;
+        int tar = 6;
 
         boolean vis[] = new boolean[V];
         vis[src] = true;

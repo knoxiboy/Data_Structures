@@ -41,14 +41,15 @@ public class DS23_Graph {
         graph[5].add(new Edge(5, 3, 1));
         graph[5].add(new Edge(5, 4, 1));
         graph[5].add(new Edge(5, 6, 1));
-        graph[5].add(new Edge(6, 5, 1));
+
+        graph[6].add(new Edge(6, 5, 1));
     }
     
     public static void main(String[] args) {
-        int V = 6;
-        ArrayList<Edge> graph[] = new ArrayList[V];
-
+        int V = 7; //number of vertices
         //creating the graph
+        ArrayList<Edge> graph[] = new ArrayList[V];
+        //creating the graph using adjacency list
         createGraph(graph);
 
         //neighbours of 2 and their wt

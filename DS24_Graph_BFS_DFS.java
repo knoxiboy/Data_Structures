@@ -41,11 +41,12 @@ public class DS24_Graph_BFS_DFS {
         graph[5].add(new Edge(5, 3, 1));
         graph[5].add(new Edge(5, 4, 1));
         graph[5].add(new Edge(5, 6, 1));
-        graph[5].add(new Edge(6, 5, 1));
+
+        graph[6].add(new Edge(6, 5, 1));
     }
 
     //bfs
-    public static void bfs(ArrayList<Edge> graph[], int V, boolean visited[], int start){
+    public static void bfs(ArrayList<Edge> graph[], int start, boolean visited[]){
         Queue<Integer> q = new LinkedList<>();
         q.add(start); //Source = 0
 
@@ -104,10 +105,10 @@ public class DS24_Graph_BFS_DFS {
 
         //bfs if broken parts are their
         System.out.println("BFS : ");
-        boolean visited[] = new boolean[V];
+        boolean visited1[] = new boolean[V];
         for(int i = 0; i < V; i++){
-            if(visited[i] == false){
-                bfs(graph, V, visited, i);
+            if(visited1[i] == false){
+                bfs(graph, i, visited1);
             }
         }
 

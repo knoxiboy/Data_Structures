@@ -3,6 +3,8 @@ package Data_Structures;
 import java.util.ArrayList;
 import java.util.Stack;
 
+//topological sort of a directed acyclic graph (DAG) using DFS
+//topological sort is a linear ordering of vertices such that for every directed edge u -> v, vertex u comes before v in the ordering
 public class DS28_TopologicalSort {
     static class Edge {
         int src;
